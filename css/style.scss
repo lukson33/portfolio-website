@@ -39,11 +39,18 @@ html {
 //Wrapper
 .welcome {
   height: 100vh;
+  z-index: 100;
   width: 100vw;
   position: absolute;
   background: #0f2027;
-  background: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  // background: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  // background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(270deg, #397b42, #1fc5c6, #0e7ae4);
+  background-size: 600% 600%;
+
+  -webkit-animation: gradientAnimation 9s ease infinite;
+  -moz-animation: gradientAnimation 9s ease infinite;
+  animation: gradientAnimation 9s ease infinite;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,6 +73,40 @@ html {
     letter-spacing: 2px;
     opacity: 0;
     margin: 2rem 0 4rem 0;
+  }
+}
+
+@-webkit-keyframes gradientAnimation {
+  0% {
+    background-position: 0% 53%;
+  }
+  50% {
+    background-position: 100% 48%;
+  }
+  100% {
+    background-position: 0% 53%;
+  }
+}
+@-moz-keyframes gradientAnimation {
+  0% {
+    background-position: 0% 53%;
+  }
+  50% {
+    background-position: 100% 48%;
+  }
+  100% {
+    background-position: 0% 53%;
+  }
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 53%;
+  }
+  50% {
+    background-position: 100% 48%;
+  }
+  100% {
+    background-position: 0% 53%;
   }
 }
 
