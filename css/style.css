@@ -321,6 +321,10 @@ html {
   margin-bottom: 3rem;
 }
 
+.project-text-mr {
+  margin-right: 4rem;
+}
+
 .project-icons-1 {
   display: -webkit-box;
   display: -ms-flexbox;
