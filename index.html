@@ -14,57 +14,96 @@
 
 <body>
 
-    <!-- <div class="welcome">
+    <div class="welcome">
         <h2 class="welcome-heading">Luka Gojkovic</h2>
-        <h3 class="welcome-sub-heading">front end developer</h3>
+        <h3 class="welcome-sub-heading">front-end developer</h3>
         <div class="loader-wrapper">
             <div class="loader"></div>
         </div>
-    </div> -->
+    </div>
 
-    <nav class="nav">
-        <ul class="nav-list">
-            <li class="nav-link"><a href="#">ABOUT</a></li>
-            <li class="nav-link"><a href="#">PROJECTS</a></li>
-            <li class="nav-link"><a href="#">CONTACT</a></li>
-        </ul>
-    </nav>
+
 
     <header class="header">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="fade nav-link click-about"><a href="index.html#about">ABOUT</a></li>
+                <li class="fade nav-link click-projects"><a href="index.html#projects">PROJECTS</a></li>
+                <li class="fade nav-link click-contact"><a href="index.html#contact">CONTACT</a></li>
+            </ul>
+        </nav>
         <div class="header-content">
             <h1 class="header-h1 fade">Good afternoon, I'm <span class="header-name"><a href="">Luka
                         Gojkovic</a></span>
             </h1>
-            <p class="fade">a web developer from the little-known state of New York. <br> I've loved computers since I
+            <p class="fade">a web developer from a little European city called Belgrade. <br> I've loved computers since
+                I
                 was a
                 child, and
                 I'm excited to make this my life's work.</p>
-            <p class="fade">Down below are some of my projects</p>
-            <p class="fade">Alternatively, you can download my <span><a class="header-btn" href="">résumé</a></span>
+            <p class="fade">Down below are some of my projects.</p>
+            <!-- <p class="fade">Alternatively, you can download my <span><a class="header-btn" href="">résumé</a></span> -->
             </p>
 
-            <span><a class="header-btn fade" href="">GitHub</a>
-                <a class="header-btn fade" href="">LinkedIn</a></span>
+            <span><a class="header-btn fade" href="https://github.com/lukson33">GitHub</a>
+                <a class="header-btn fade"
+                    href="https://www.linkedin.com/in/luka-gojkovic-028775140/">LinkedIn</a></span>
         </div>
     </header>
+
+    <section id="about">
+        <div class="about-container">
+            <div class="about-img">
+                <img src="img/slika.jpg" alt="">
+            </div>
+
+            <div class="about-content">
+                <h2>About Me</h2>
+
+                <p> I have a passion for coding, animations and creating intuitive, dynamic user experiences. In my free
+                    time I like to learn new technologies, listen to music, play video games, and binge an occasional tv
+                    show.
+                    I'm a big motorsports guy as well.
+                </p>
+                <p>I'm currently working on completing my bachelor's degree in computer multimedia at ITS in Belgrade.
+                </p>
+
+                <div class="about-skills">
+                    <h3>My Skills</h3>
+                    <p>Programming</p>
+                    <div class="project-icons-0">
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>HTML</p>
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>CSS</p>
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>SASS</p>
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>JavaScript</p>
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>React</p>
+                    </div>
+                </div>
+                <div class="about-skills">
+                    <p>Tools / Design</p>
+                    <div class="project-icons-0">
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>Git / Github</p>
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>Photoshop</p>
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>Illustrator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="projects">
         <div class="project project-1">
             <div class="project-content">
                 <div class="project-img">
-                    <a href="#"><img src="img/project1.jpg" alt=""></a>
+                    <a href="www.cornelius-cylinder.com"><img src="img/project1.jpg" alt=""></a>
                 </div>
 
                 <div class="project-text">
                     <h3>Cornelius & Cylinder</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio molestias quis temporibus
-                        ullam
-                        itaque! Veritatis, magnam nulla quis reiciendis quas rem rerum, nesciunt aliquid nostrum ipsa
-                        dolorem, saepe iste animi.</p>
+                    <p>This is a full website that I did for a restaurant in Belgrade called Cornelius & Cylinder.</p>
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ipsum ipsa temporibus officia,
-                        blanditiis voluptate eveniet aliquam? Sed deserunt ipsam magnam neque, nostrum dolor alias quod
-                        sequi, omnis, ex cumque.</p>
+                    <p>This website was fully deigned and coded by me. It has a main page with all the information about
+                        the restaurant, as well as an interactive Menu Page with food photos, and a picture gallery.</p>
 
                     <div class="project-icons-1">
                         <p><i class="fa fa-circle" aria-hidden="true"></i>HTML</p>
@@ -72,7 +111,8 @@
                         <p><i class="fa fa-circle" aria-hidden="true"></i>JavaScript</p>
                     </div>
 
-                    <a class="view-code-1" href="#">View Code <i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a class="view-code-1" href="https://github.com/lukson33/lukson33.github.io">View Code <i
+                            class="fa fa-github" aria-hidden="true"></i></a>
                 </div>
 
             </div>
@@ -82,68 +122,75 @@
             <div class="project-content">
 
                 <div class="project-text project-text-mr">
-                    <h3>Cornelius & Cylinder</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio molestias quis temporibus
-                        ullam
-                        itaque! Veritatis, magnam nulla quis reiciendis quas rem rerum, nesciunt aliquid nostrum ipsa
-                        dolorem, saepe iste animi.</p>
+                    <h3>Todo App with React Hooks</h3>
+                    <p>Todo list application I built with a Javascript framework React.</p>
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ipsum ipsa temporibus officia,
-                        blanditiis voluptate eveniet aliquam? Sed deserunt ipsam magnam neque, nostrum dolor alias quod
-                        sequi, omnis, ex cumque.</p>
+                    <p>I built this while learning React to solidify my knowledge and to practice a new React
+                        technology, React Hooks.</p>
 
                     <div class="project-icons-2">
                         <p><i class="fa fa-circle" aria-hidden="true"></i>HTML</p>
                         <p><i class="fa fa-circle" aria-hidden="true"></i>CSS</p>
                         <p><i class="fa fa-circle" aria-hidden="true"></i>JavaScript</p>
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>React</p>
                     </div>
 
-                    <a class="view-code-2" href="#">View Code <i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a class="view-code-2" href="https://github.com/lukson33/hooks-todo">View Code <i
+                            class="fa fa-github" aria-hidden="true"></i></a>
                 </div>
 
                 <div class="project-img">
-                    <a href="#"><img src="img/project1.jpg" alt=""></a>
+                    <a href="#"><img src="img/project2.png" alt=""></a>
                 </div>
 
             </div>
         </div>
 
-        <div class="project project-1">
+        <div class="project project-3">
             <div class="project-content">
                 <div class="project-img">
-                    <a href="#"><img src="img/project1.jpg" alt=""></a>
+                    <a href="#"><img src="img/project3.png" alt=""></a>
                 </div>
 
                 <div class="project-text">
-                    <h3>Cornelius & Cylinder</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio molestias quis temporibus
-                        ullam
-                        itaque! Veritatis, magnam nulla quis reiciendis quas rem rerum, nesciunt aliquid nostrum ipsa
-                        dolorem, saepe iste animi.</p>
+                    <h3>Dad Jokes React App</h3>
+                    <p>A fun little game I made with a DadJokes API to further practice React and Javascript.</p>
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ipsum ipsa temporibus officia,
-                        blanditiis voluptate eveniet aliquam? Sed deserunt ipsam magnam neque, nostrum dolor alias quod
-                        sequi, omnis, ex cumque.</p>
+                    <p>This app has a joke upvoting system similar to Reddit which user can interact with as well as a
+                        button for loading new jokes.</p>
 
-                    <div class="project-icons-1">
+                    <div class="project-icons-3">
                         <p><i class="fa fa-circle" aria-hidden="true"></i>HTML</p>
                         <p><i class="fa fa-circle" aria-hidden="true"></i>CSS</p>
                         <p><i class="fa fa-circle" aria-hidden="true"></i>JavaScript</p>
+                        <p><i class="fa fa-circle" aria-hidden="true"></i>React</p>
                     </div>
 
-                    <a class="view-code-1" href="#">View Code <i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a class="view-code-3" href="https://github.com/lukson33/dadjokes">View Code <i class="fa fa-github"
+                            aria-hidden="true"></i></a>
                 </div>
 
             </div>
         </div>
     </section>
 
+    <footer id="contact">
+        <h3>Contact Me</h3>
+        <div class="icon-container">
+            <a class="icon" href="https://github.com/lukson33"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a class="icon" href="https://www.linkedin.com/in/luka-gojkovic-028775140/"><i class="fa fa-linkedin"
+                    aria-hidden="true"></i></a>
+            <a class="icon" href="mailto:luka.gojkovic33@gmail.com?Subject=Hello%20again"><i class="fa fa-envelope-o"
+                    aria-hidden="true"></i></a>
+        </div>
+    </footer>
 
 
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <script type="text/javascript" src="js/wow.js"></script>
-    <!-- <script src="js/app.js"></script> -->
+    <script src="js/app.js"></script>
 </body>
 
 </html>

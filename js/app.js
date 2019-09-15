@@ -76,3 +76,30 @@ document.addEventListener("DOMContentLoaded", () => {
     translateY: ["-15px", "0px"]
   });
 });
+
+$(".click-about").click(function() {
+  $("html,body").animate(
+    {
+      scrollTop: $("#about").offset().top
+    },
+    "slow"
+  );
+});
+
+$(".click-projects").click(function() {
+  $("html,body").animate(
+    {
+      scrollTop: $("#projects").offset().top
+    },
+    "slow"
+  );
+});
+
+$(".click-contact").click(function() {
+  $("html,body").animate(
+    {
+      scrollTop: $("#contact").offset().top
+    },
+    "slow"
+  );
+});
