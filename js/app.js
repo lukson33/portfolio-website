@@ -1,3 +1,43 @@
+const nav = document.getElementsByTagName("nav")[0];
+const burger = document.getElementById("burger");
+const text = document.querySelectorAll(".text");
+const exit = document.getElementById("exit");
+
+window.addEventListener("load", () => {
+  nav.classList.add("hidden");
+});
+
+burger.addEventListener("click", () => {
+  nav.classList.toggle("hidden");
+
+  text.forEach((t, i) => {
+    if (t.style.animation) {
+      t.style.animation = "";
+      setTimeout(function() {
+        burger.classList.remove("absolute");
+      }, 300);
+    } else {
+      t.style.animation = `fadeText 0.5s ease forwards ${i / 14 + 0.1}s`;
+      burger.classList.add("absolute");
+    }
+  });
+});
+
+exit.addEventListener("click", () => {
+  nav.classList.add("hidden");
+  text.forEach(t => (t.style.animation = ""));
+  setTimeout(function() {
+    burger.classList.remove("absolute");
+  }, 300);
+});
+
+text.forEach(t =>
+  t.addEventListener("click", () => {
+    nav.classList.add("hidden");
+    text.forEach(t => (t.style.animation = ""));
+  })
+);
+
 document.addEventListener("DOMContentLoaded", () => {
   // Wrapper animation
   anime

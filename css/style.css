@@ -119,6 +119,10 @@ html {
   border-radius: 100px;
 }
 
+#burger {
+  background-color: transparent;
+}
+
 .header {
   height: 100vh;
   width: 100%;
@@ -153,7 +157,7 @@ html {
 }
 
 .header .fade {
-  opacity: 0;
+  opacity: 1;
 }
 
 .header-name a {
@@ -205,33 +209,91 @@ html {
   margin-bottom: 1.2rem;
 }
 
-.nav {
-  padding-top: 5rem;
-  background-color: #c9c9c9;
-}
-
-.nav-list {
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-right: 5rem;
+  padding: 1rem 5rem 0 0;
+  -webkit-transition: 0.25s all cubic-bezier(0.82, 0.01, 0.2, 0.99);
+  transition: 0.25s all cubic-bezier(0.82, 0.01, 0.2, 0.99);
 }
 
-.nav-link {
-  margin-right: 5rem;
+nav .nav-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .nav-content .text {
+  margin-right: 3rem;
   font-size: 3rem;
-  opacity: 1;
 }
 
-.nav-link:last-child {
+nav .nav-content .text:last-child {
   margin: 0;
+}
+
+.hidden {
+  opacity: 0;
+  -webkit-transform: scale(0.93);
+          transform: scale(0.93);
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@-webkit-keyframes fadeText {
+  0% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeText {
+  0% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 40px 30px 0 0;
+  opacity: 0;
+}
+
+#burger .bar {
+  width: 30px;
+  margin-bottom: 5px;
+  height: 3px;
+  background-color: #fff;
 }
 
 #about {
@@ -305,7 +367,6 @@ html {
   background: #0f2027;
   background: -webkit-gradient(linear, left top, right top, from(#0f2027), color-stop(#203a43), to(#2c5364));
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  margin: 0 auto;
 }
 
 .project-2 {
@@ -458,7 +519,7 @@ html {
 }
 
 .project-icons-2 p i {
-  margin-right: 0.7rem;
+  margin-right: 0.3rem;
   color: #aa6aff;
 }
 
@@ -579,6 +640,78 @@ footer .icon-container .icon:last-child {
   .project-icons-0 {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .navigation {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navigation nav {
+    border-radius: 5px;
+    background-color: #333333;
+    margin: 0 auto;
+    height: 95%;
+    width: 95%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+  }
+  .navigation nav #exit {
+    position: absolute;
+    top: 4%;
+    right: 4%;
+  }
+  .navigation nav #exit .one-x {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    border-radius: 2px;
+  }
+  .navigation nav #exit .two-x {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    -webkit-transform: translateY(-3px) rotate(-45deg);
+            transform: translateY(-3px) rotate(-45deg);
+    border-radius: 2px;
+  }
+  .navigation nav .nav-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navigation nav .nav-content .text {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 4rem;
+  }
+  .navigation nav .nav-content .text:last-child {
+    margin: 0;
+  }
+  .navigation nav .text {
+    opacity: 0;
+  }
+  #burger {
+    opacity: 1;
   }
 }
 
