@@ -23,14 +23,6 @@ a {
   color: inherit;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-
 html {
   font-size: 62.5%;
 }
@@ -117,10 +109,6 @@ html {
   width: 250px;
   background-color: #fff;
   border-radius: 100px;
-}
-
-#burger {
-  background-color: transparent;
 }
 
 .header {
@@ -242,10 +230,8 @@ nav .nav-content .text:last-child {
           transform: scale(0.93);
 }
 
-.absolute {
-  position: absolute;
-  top: 0;
-  right: 0;
+.fixed {
+  position: fixed !important;
 }
 
 @-webkit-keyframes fadeText {
@@ -275,6 +261,10 @@ nav .nav-content .text:last-child {
 }
 
 #burger {
+  position: fixed;
+  z-index: 1500;
+  top: 0;
+  right: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -285,7 +275,7 @@ nav .nav-content .text:last-child {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding: 40px 30px 0 0;
+  padding: 3rem 2rem;
   opacity: 0;
 }
 
@@ -294,6 +284,10 @@ nav .nav-content .text:last-child {
   margin-bottom: 5px;
   height: 3px;
   background-color: #fff;
+}
+
+.z-index-toggle {
+  z-index: 1 !important;
 }
 
 #about {
@@ -652,13 +646,15 @@ footer .icon-container .icon:last-child {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .navigation nav {
-    border-radius: 5px;
     background-color: #333333;
     margin: 0 auto;
-    height: 95%;
-    width: 95%;
+    height: 100vh;
+    width: 100vw;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -669,7 +665,7 @@ footer .icon-container .icon:last-child {
   .navigation nav #exit {
     position: absolute;
     top: 4%;
-    right: 4%;
+    right: 7%;
   }
   .navigation nav #exit .one-x {
     width: 30px;
