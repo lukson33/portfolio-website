@@ -3,8 +3,21 @@ const burger = document.getElementById("burger");
 const text = document.querySelectorAll(".text");
 const exit = document.getElementById("exit");
 
+window.addEventListener("resize", () => {
+  if (window.innerWidth < 800) {
+    nav.classList.add("hidden");
+    burger.classList.remove("hidden");
+  } else if (window.innerWidth > 800) {
+    nav.classList.remove("hidden");
+    burger.classList.add("hidden");
+  }
+});
+
 window.addEventListener("load", () => {
-  nav.classList.add("hidden");
+  if (window.innerWidth > 800) {
+    nav.classList.remove("hidden");
+    burger.classList.add("hidden");
+  }
 });
 
 burger.addEventListener("click", () => {

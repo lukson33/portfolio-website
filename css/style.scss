@@ -149,7 +149,7 @@ html {
   }
 
   .fade {
-    opacity: 1;
+    opacity: 0;
   }
 
   &-name a {
@@ -200,7 +200,6 @@ html {
 nav {
   display: flex;
   justify-content: flex-end;
-  padding: 1rem 5rem 0 0;
   transition: 0.25s all cubic-bezier(0.82, 0.01, 0.2, 0.99);
 
   .nav-content {
@@ -214,11 +213,15 @@ nav {
     .text:last-child {
       margin: 0;
     }
+
+    .nav-container {
+      padding: 5rem;
+    }
   }
 }
 
 .hidden {
-  opacity: 0;
+  opacity: 0 !important;
   transform: scale(0.93);
 }
 
@@ -551,6 +554,20 @@ footer {
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  nav {
+    .nav-content {
+      .text {
+        font-size: 2.5rem;
+      }
+
+      .nav-container {
+        padding: 5rem 2rem;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 840px) {
   .project {
     padding: 8rem 0;
@@ -590,7 +607,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
   .navigation {
     height: 100%;
     display: flex;
@@ -609,8 +626,9 @@ footer {
 
       #exit {
         position: absolute;
-        top: 4%;
-        right: 7%;
+        top: 1%;
+        right: 2%;
+        padding: 3rem 2rem;
 
         .one-x {
           width: 30px;
@@ -643,16 +661,17 @@ footer {
         .text:last-child {
           margin: 0;
         }
+
+        .nav-container {
+          display: flex;
+          flex-direction: column;
+        }
       }
 
       .text {
         opacity: 0;
       }
     }
-  }
-
-  #burger {
-    opacity: 1;
   }
 }
 
