@@ -18,21 +18,25 @@ burger.addEventListener("click", () => {
       }, 300);
     } else {
       t.style.animation = `fadeText 0.5s ease forwards ${i / 14 + 0.1}s`;
-      burger.classList.add("absolute");
+      nav.classList.add("fixed");
+      burger.classList.add("z-index-toggle");
     }
   });
 });
 
 exit.addEventListener("click", () => {
   nav.classList.add("hidden");
-  text.forEach(t => (t.style.animation = ""));
   setTimeout(function() {
+    nav.classList.remove("fixed");
+    burger.classList.remove("z-index-toggle");
     burger.classList.remove("absolute");
+    text.forEach(t => (t.style.animation = ""));
   }, 300);
 });
 
 text.forEach(t =>
   t.addEventListener("click", () => {
+    nav.classList.remove("fixed");
     nav.classList.add("hidden");
     text.forEach(t => (t.style.animation = ""));
   })
