@@ -2,6 +2,7 @@ const nav = document.getElementsByTagName("nav")[0];
 const burger = document.getElementById("burger");
 const text = document.querySelectorAll(".text");
 const exit = document.getElementById("exit");
+const html = document.getElementsByTagName("html")[0];
 
 window.addEventListener("resize", () => {
   if (window.innerWidth < 800) {
@@ -14,6 +15,7 @@ window.addEventListener("resize", () => {
 });
 
 window.addEventListener("load", () => {
+  html.classList.add("disable-scroll");
   if (window.innerWidth > 800) {
     nav.classList.remove("hidden");
     burger.classList.add("hidden");
@@ -55,6 +57,7 @@ text.forEach(t =>
   })
 );
 
+//Loading animations
 document.addEventListener("DOMContentLoaded", () => {
   // Wrapper animation
   anime
@@ -72,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
       duration: 1500,
       complete: function(anime) {
         document.querySelector(".welcome").remove();
+        html.classList.remove("disable-scroll");
       }
     });
 
@@ -134,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//Navigation scrolling
 $(".click-about").click(function() {
   $("html,body").animate(
     {
