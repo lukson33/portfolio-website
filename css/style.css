@@ -14,6 +14,10 @@ body {
   font-family: "Fira Sans", sans-serif;
 }
 
+.disable-scroll {
+  overflow-y: hidden;
+}
+
 li {
   list-style: none;
 }
@@ -99,7 +103,7 @@ html {
 .loader-wrapper {
   height: 2px;
   width: 250px;
-  background-color: #626262;
+  background-color: #3b3b3b;
   border-radius: 100px;
   opacity: 0;
 }
@@ -137,6 +141,7 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 85%;
 }
 
 .header-h1 {
@@ -284,6 +289,15 @@ nav .nav-content .nav-container {
 
 #burger .bar {
   width: 30px;
+  border-radius: 50px;
+  margin-bottom: 5px;
+  height: 3px;
+  background-color: #fff;
+}
+
+#burger .bar-2 {
+  width: 25px;
+  border-radius: 50px;
   margin-bottom: 5px;
   height: 3px;
   background-color: #fff;
@@ -297,7 +311,12 @@ nav .nav-content .nav-container {
   width: 100%;
   height: 85vh;
   position: relative;
-  background-image: url("../img/header-cover.jpg");
+  background: #c31432;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#240b36), to(#c31432));
+  background: linear-gradient(to right, #240b36, #c31432);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -642,8 +661,24 @@ footer .icon-container .icon:last-child {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 75%;
+  }
+  .project-content {
+    width: 70%;
   }
   .project-icons-0 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .project-icons-1 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .project-icons-2 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .project-icons-3 {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -730,16 +765,34 @@ footer .icon-container .icon:last-child {
   }
 }
 
+@media only screen and (max-width: 630px) {
+  .welcome-heading {
+    font-size: 7rem;
+  }
+  .welcome-sub-heading {
+    font-size: 3rem;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .about-img img {
     max-width: 65% !important;
   }
 }
 
-@media only screen and (max-width: 450px) {
-  #about {
-    height: 190vh;
+@media only screen and (max-width: 540px) {
+  .welcome-heading {
+    font-size: 5rem;
   }
+  .welcome-sub-heading {
+    font-size: 2.5rem;
+  }
+  .project-img img {
+    max-width: 130%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
   #about .about-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -749,9 +802,45 @@ footer .icon-container .icon:last-child {
   .about-img img {
     max-width: 65% !important;
   }
+  .nav-link {
+    font-size: 2rem;
+  }
+  .header-h1 {
+    font-size: 4rem;
+  }
+  .header-name a {
+    font-size: 4rem;
+  }
+  .header p {
+    font-size: 1.8rem;
+  }
+  .header-btn {
+    margin-bottom: 1rem;
+  }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 400px) {
+  #about {
+    height: 190vh;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .welcome-heading {
+    font-size: 4rem;
+  }
+  .welcome-sub-heading {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-height: 590px) {
+  #about {
+    height: 230vh;
+  }
+}
+
+@media only screen and (max-width: 330px) {
   .nav-link {
     font-size: 2rem;
   }
@@ -762,7 +851,7 @@ footer .icon-container .icon:last-child {
     font-size: 3rem;
   }
   .header p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   .header-btn {
     margin-bottom: 1rem;
