@@ -176,6 +176,10 @@ html {
   font-size: 2rem;
 }
 
+.header-btn i {
+  margin-left: 1rem;
+}
+
 .header-btn::before {
   content: "";
   position: absolute;
@@ -441,6 +445,7 @@ nav .nav-content .nav-container {
   display: inline-block;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
+  margin: 0 1rem 1.5rem 0;
 }
 
 .project-text .view-code-1:hover {
@@ -457,6 +462,7 @@ nav .nav-content .nav-container {
   display: inline-block;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
+  margin: 0 1rem 1.5rem 0;
 }
 
 .project-text .view-code-2:hover {
@@ -473,6 +479,7 @@ nav .nav-content .nav-container {
   display: inline-block;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
+  margin: 0 1rem 1.5rem 0;
 }
 
 .project-text .view-code-3:hover {
