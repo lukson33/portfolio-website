@@ -52,10 +52,18 @@ exit.addEventListener("click", () => {
 text.forEach(t =>
   t.addEventListener("click", () => {
     nav.classList.remove("fixed");
-    nav.classList.add("hidden");
+    if (window.innerWidth < 800) {
+      nav.classList.add("hidden");
+    }
+
     text.forEach(t => (t.style.animation = ""));
   })
 );
+
+//Enable scroll
+setTimeout(() => {
+  html.classList.remove("disable-scroll");
+}, 4000);
 
 //Loading animations
 document.addEventListener("DOMContentLoaded", () => {
@@ -78,6 +86,14 @@ document.addEventListener("DOMContentLoaded", () => {
         html.classList.remove("disable-scroll");
       }
     });
+
+  anime({
+    targets: ".header",
+    delay: 400,
+    opacity: 1,
+    duration: 1800,
+    easing: "easeOutExpo"
+  });
 
   // Heading animation
   anime({

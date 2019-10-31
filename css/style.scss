@@ -28,14 +28,6 @@ a {
   color: inherit;
 }
 
-// body {
-//   width: 100vw;
-//   height: 100vh;
-//   padding: 0;
-//   margin: 0;
-//   position: relative;
-// }
-
 html {
   font-size: 62.5%;
 }
@@ -131,10 +123,11 @@ html {
 }
 
 //Header
+
 .header {
   height: 100vh;
   width: 100%;
-  background-color: rgb(201, 201, 201);
+  background: linear-gradient(42deg, #1fc5c6 50%, #0e7ae4 50%);
 
   &-content {
     text-align: center;
@@ -152,6 +145,7 @@ html {
   &-h1 {
     font-size: 5rem;
     margin-bottom: 1.2rem;
+    color: rgb(19, 19, 53);
   }
 
   .fade {
@@ -191,7 +185,7 @@ html {
     right: 0;
     bottom: 0;
     transform: scaleX(0);
-    background-color: rgb(116, 116, 116);
+    background-color: rgb(47, 47, 104);
     z-index: -1;
     transition: 0.3s all;
     transform-origin: 0 50%;
@@ -204,6 +198,7 @@ html {
   p {
     font-size: 2rem;
     margin-bottom: 1.2rem;
+    color: rgb(19, 19, 53);
   }
 }
 
@@ -218,6 +213,7 @@ nav {
     .text {
       margin-right: 3rem;
       font-size: 3rem;
+      color: rgb(19, 19, 53);
     }
 
     .text:last-child {
@@ -287,18 +283,7 @@ nav {
   width: 100%;
   height: 85vh;
   position: relative;
-  background: #c31432; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #240b36,
-    #c31432
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #240b36,
-    #c31432
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background-color: rgb(19, 19, 53);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -372,16 +357,16 @@ nav {
   }
 
   &-3 {
-    background: #ff9966; /* fallback for old browsers */
+    background: #141e30; /* fallback for old browsers */
     background: -webkit-linear-gradient(
       to right,
-      #ff5e62,
-      #ff9966
+      #243b55,
+      #141e30
     ); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(
       to right,
-      #ff5e62,
-      #ff9966
+      #243b55,
+      #141e30
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
@@ -446,14 +431,14 @@ nav {
     .view-code-3 {
       padding: 1rem 2rem;
       border-radius: 3px;
-      background-color: rgb(218, 77, 72);
+      background-color: rgb(50, 165, 241);
       font-size: 2rem;
       display: inline-block;
       transition: 0.3s all;
       margin: 0 1rem 1.5rem 0;
 
       &:hover {
-        background-color: rgb(148, 51, 50);
+        background-color: rgb(15, 97, 151);
         -webkit-box-shadow: 5px 5px 5px -4px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 5px 5px 5px -4px rgba(0, 0, 0, 0.75);
         box-shadow: 5px 5px 5px -4px rgba(0, 0, 0, 0.75);
@@ -522,7 +507,7 @@ nav {
 
       i {
         margin-right: 0.7rem;
-        color: rgb(218, 77, 72);
+        color: rgb(50, 165, 241);
       }
     }
   }
