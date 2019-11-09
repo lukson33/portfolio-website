@@ -229,7 +229,13 @@ nav .nav-content {
 nav .nav-content .text {
   margin-right: 3rem;
   font-size: 3rem;
-  color: #131335;
+  color: #212157;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+nav .nav-content .text:hover {
+  color: #08081a;
 }
 
 nav .nav-content .text:last-child {
@@ -291,7 +297,6 @@ nav .nav-content .nav-container {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding: 3rem 2rem;
   opacity: 0;
 }
 
@@ -433,6 +438,7 @@ nav .nav-content .nav-container {
 
 .project-text {
   color: #fff;
+  margin-right: 2rem;
 }
 
 .project-text .view-code-1 {
@@ -512,7 +518,7 @@ nav .nav-content .nav-container {
 
 .project-icons-0 p i {
   margin-right: 0.7rem;
-  color: #eb8aff;
+  color: #44d9ec;
 }
 
 .project-icons-1 {
@@ -575,12 +581,7 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 20vh;
-  background: #2980b9;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#2c3e50), to(#2980b9));
-  background: linear-gradient(to right, #2c3e50, #2980b9);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #0b1236;
   padding: 5rem 0;
 }
 
@@ -691,6 +692,9 @@ footer .icon-container .icon:last-child {
 }
 
 @media only screen and (max-width: 800px) {
+  #burger {
+    padding: 3rem 2rem;
+  }
   .navigation {
     height: 100%;
     display: -webkit-box;
@@ -704,7 +708,7 @@ footer .icon-container .icon:last-child {
             justify-content: center;
   }
   .navigation nav {
-    background-color: #333333;
+    background: #117979;
     margin: 0 auto;
     height: 100vh;
     width: 100vw;

@@ -213,7 +213,12 @@ nav {
     .text {
       margin-right: 3rem;
       font-size: 3rem;
-      color: rgb(19, 19, 53);
+      color: rgb(33, 33, 87);
+      transition: 0.3s all;
+
+      &:hover {
+        color: rgb(8, 8, 26);
+      }
     }
 
     .text:last-child {
@@ -254,7 +259,6 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 3rem 2rem;
   opacity: 0;
 
   .bar {
@@ -393,6 +397,7 @@ nav {
 
   &-text {
     color: #fff;
+    margin-right: 2rem;
 
     .view-code-1 {
       padding: 1rem 2rem;
@@ -468,7 +473,7 @@ nav {
 
       i {
         margin-right: 0.7rem;
-        color: rgb(235, 138, 255);
+        color: rgb(68, 217, 236);
       }
     }
   }
@@ -520,17 +525,7 @@ footer {
   justify-content: center;
   flex-direction: column;
   height: 20vh;
-  background: #2980b9; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #2c3e50,
-    #2980b9
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #2c3e50,
-    #2980b9
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #0b1236;
   padding: 5rem 0;
 
   h3 {
@@ -643,6 +638,10 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
+  #burger {
+    padding: 3rem 2rem;
+  }
+
   .navigation {
     height: 100%;
     display: flex;
@@ -650,7 +649,7 @@ footer {
     justify-content: center;
 
     nav {
-      background-color: rgb(51, 51, 51);
+      background: #117979;
       margin: 0 auto;
       height: 100vh;
       width: 100vw;
